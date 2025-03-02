@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 interface FetchState<T> {
   data: T | null;
@@ -6,10 +6,7 @@ interface FetchState<T> {
   error: string | null;
 }
 
-export default function useFetch<T>(
-  url: RequestInfo,
-  options?: RequestInit,
-): FetchState<T> {
+export default function useFetch<T>(url: RequestInfo, options?: RequestInit) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +27,7 @@ export default function useFetch<T>(
           signal: signal,
         });
         console.log(res);
-        if (!res.ok) throw new Error("Error: " + res.status);
+        if (!res.ok) throw new Error('Error: ' + res.status);
         const json = (await res.json()) as T;
         if (!signal.aborted) {
           setData(json);
