@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface FetchState<T> {
   data: T | null;
@@ -26,8 +26,7 @@ export default function useFetch<T>(url: RequestInfo, options?: RequestInit) {
           ...optionsRef,
           signal: signal,
         });
-        console.log(res);
-        if (!res.ok) throw new Error('Error: ' + res.status);
+        if (!res.ok) throw new Error("Error: " + res.status);
         const json = (await res.json()) as T;
         if (!signal.aborted) {
           setData(json);

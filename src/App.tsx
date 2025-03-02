@@ -1,16 +1,19 @@
-import Header from './components/Header';
-import SideNav from './components/SideNav';
-import Summary from './pages/Summary';
+import Header from "./components/Header";
+import SideNav from "./components/SideNav";
+import { DataContextProvider } from "./context/DataContext";
+import Summary from "./pages/Summary";
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
+    <div className="grid gap-5 p-5">
+      <DataContextProvider>
         <SideNav />
-        <Summary />
-      </main>
-    </>
+        <main>
+          <Header />
+          <Summary />
+        </main>
+      </DataContextProvider>
+    </div>
   );
 }
 
