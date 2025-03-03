@@ -1,19 +1,22 @@
+import { Link } from "react-router-dom";
 import { DataFetch } from "../context/DataContext";
 
 const VendaItem = ({ venda }: { venda: DataFetch }) => {
   return (
     <div className="my-4 rounded-md bg-zinc-800 p-4">
-      <a href="">ID: {venda.id}</a>
-      <div className="flex justify-between">
-        <div>Nome: {venda.nome}</div>
-        <div>
-          Preço:{" "}
-          {venda.preco.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL",
-          })}
+      <Link to={`/vendas/${venda.id}`}>
+        <p>ID: {venda.id}</p>
+        <div className="flex justify-between">
+          <p>Nome: {venda.nome}</p>
+          <p>
+            Preço:{" "}
+            {venda.preco.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
