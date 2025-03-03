@@ -1,4 +1,5 @@
 import { useDataContext } from "../context/DataContext";
+import Vendas from "./Vendas";
 
 const Summary = () => {
   const { data } = useDataContext();
@@ -41,6 +42,8 @@ const Summary = () => {
               })}
           </span>
         </div>
+        <div className="mt-8">Graficos</div>
+        <Vendas />
       </div>
     </section>
   );

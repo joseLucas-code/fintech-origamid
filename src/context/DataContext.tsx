@@ -11,7 +11,7 @@ type DataContext = {
   setFinal: React.Dispatch<React.SetStateAction<string>>;
 };
 
-type DataFetch = {
+export type DataFetch = {
   id: string;
   nome: string;
   preco: number;
