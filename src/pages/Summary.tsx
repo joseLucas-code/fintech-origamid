@@ -6,9 +6,10 @@ const Summary = () => {
   if (!data) return null;
   return (
     <section className="mt-8">
-      <div className="space-y-4">
+      <h2 className="text-4xl font-semibold">Resumo</h2>
+      <div className="mt-8 space-y-4">
         <div>
-          <h2 className="text-3xl font-semibold">Vendas</h2>
+          <h2 className="text-2xl font-semibold">Vendas</h2>
           <span className="text-xl font-medium">
             {data
               .reduce((acc, item) => acc + item.preco, 0)
@@ -19,7 +20,7 @@ const Summary = () => {
           </span>
         </div>
         <div>
-          <h2 className="text-3xl font-semibold">Recebidos</h2>
+          <h2 className="text-2xl font-semibold">Recebidos</h2>
           <span className="text-xl font-medium">
             {data
               .filter((item) => item.status === "pago")
@@ -31,7 +32,7 @@ const Summary = () => {
           </span>
         </div>
         <div>
-          <h2 className="text-3xl font-semibold">Processando</h2>
+          <h2 className="text-2xl font-semibold">Processando</h2>
           <span className="text-xl font-medium">
             {data
               .filter((item) => item.status === "processando")
