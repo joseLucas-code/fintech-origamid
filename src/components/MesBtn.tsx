@@ -25,7 +25,7 @@ const MesBtn = ({ n }: { n: number }) => {
   }
   return (
     <button
-      className="w-full rounded-md bg-slate-200 px-6 py-2 text-black capitalize"
+      className="w-full cursor-pointer rounded-md bg-gray-100 px-6 py-2 text-black capitalize transition-[background] hover:bg-gray-200"
       onClick={() => setMes(n)}
     >
       {nomeMes(n)}
