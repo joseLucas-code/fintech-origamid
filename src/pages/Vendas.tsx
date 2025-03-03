@@ -7,7 +7,7 @@ const Vendas = () => {
 
   if (!data) return null;
   return (
-    <div>
+    <div className="mt-8">
       <ul>
         {data.map((venda) => (
           <li key={venda.id}>

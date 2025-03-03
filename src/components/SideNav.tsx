@@ -2,6 +2,7 @@ import { useState } from "react";
 import HomeSVG from "./HomeSVG";
 import PanelLeftSVG from "./PanelLeftSVG";
 import SummarySVG from "./SummarySVG";
+import { Link } from "react-router-dom";
 const SideNav = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -23,12 +24,12 @@ const SideNav = () => {
       >
         <div className="flex flex-col gap-4 p-4">
           <div className="text-xl font-semibold">Origamid</div>
-          <a href="/" className="flex gap-2 text-lg">
-            <HomeSVG /> Home
-          </a>
-          <a href="/summary" className="flex gap-2 text-lg">
-            <SummarySVG /> Summary
-          </a>
+          <Link to="/" className="flex gap-2 text-lg">
+            <HomeSVG /> Resumo
+          </Link>
+          <Link to="/vendas" className="flex gap-2 text-lg">
+            <SummarySVG /> Vendas
+          </Link>
         </div>
       </div>
     </div>

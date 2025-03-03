@@ -44,7 +44,6 @@ const Summary = () => {
           </span>
         </div>
         <div className="mt-8">Graficos</div>
-        <Vendas />
       </div>
     </section>
   );
